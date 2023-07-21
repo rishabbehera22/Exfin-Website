@@ -1,19 +1,15 @@
-import React from 'react'
-import Navbar  from './Navbar'
-import Hero from './Hero'
-import Analyst from './Analyst';
-import Newsletter from './Newsletter';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar";
+import Home from "./Home";
 function App() {
   return (
-   <div >
-   <Navbar></Navbar>
-   <br></br>
-  <Hero></Hero>
-  <br></br>
-  <Analyst></Analyst>
-  <br></br>
-  <Newsletter></Newsletter>
-   </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 export default  App;
